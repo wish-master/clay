@@ -18,7 +18,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
-	"github.com/utrack/clay/v2/cmd/protoc-gen-goclay/internal"
+	"github.com/wish-master/clay/v2/cmd/protoc-gen-goclay/internal"
 	"google.golang.org/genproto/googleapis/api/annotations"
 )
 
