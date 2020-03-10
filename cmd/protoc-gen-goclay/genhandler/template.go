@@ -484,8 +484,8 @@ import (
 )
 
 func Test{{ .Method.Service | implTypeName }}_{{ .Method.Name | goTypeName }}(t *testing.T) {
-	api := New{{ .Service.GetName | goTypeName }}API()
-	_, err := api.{{ .Method.Name | goTypeName }}({{ pkg "context" }}Background(), &{{ .Method.RequestType.GoType $.ImplGoPkgPath | goTypeName }})
+	api := New{{ .Service.GetName | goTypeName }}()
+	_, err := api.{{ .Method.Name | goTypeName }}({{ pkg "context" }}Background(), &{{ .Method.RequestType.GoType $.ImplGoPkgPath | goTypeName }}{})
 
 	require.NotNil(t, err)
 	require.Equal(t, "{{ .Method.Name | goTypeName }} not implemented", err.Error())
