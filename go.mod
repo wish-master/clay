@@ -20,3 +20,5 @@ require (
 )
 
 go 1.13
+
+replace github.com/utrack/clay/v2 => github.com/wish-master/clay/v2 v2.4.4
