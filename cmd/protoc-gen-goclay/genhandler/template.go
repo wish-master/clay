@@ -454,7 +454,7 @@ import (
 
 {{ if .Method }}
 func (i *{{ .Method.Service | implTypeName }}) {{ .Method.Name | goTypeName }}(ctx {{ pkg "context" }}Context, req *{{ .Method.RequestType.GoType $.ImplGoPkgPath | goTypeName }}) (*{{ .Method.ResponseType.GoType $.ImplGoPkgPath | goTypeName }}, error) {
-	return nil, {{ pkg "errors" }}New("not implemented")
+	return nil, {{ pkg "errors" }}New("{{ .Method.Name | goTypeName }} not implemented")
 }
 {{ else }}
 type {{ .Service | implTypeName}} struct {}
