@@ -87,7 +87,7 @@ func (d *{{ $svc.GetName | goTypeName }}Desc) RegisterHTTP(mux {{ pkg "transport
 			}
 
 			_,outbound := {{ pkg "httpruntime" }}MarshalerForRequest(r)
-			m, ok := outbound.({{ pkg "httpruntime" }}.MarshalerPbJSON)
+			m, ok := outbound.({{ pkg "httpruntime" }}MarshalerPbJSON)
 			if ok {
 				m.Marshaler.EmitDefaults = true
 			}
