@@ -87,6 +87,10 @@ func (d *{{ $svc.GetName | goTypeName }}Desc) RegisterHTTP(mux {{ pkg "transport
 			}
 
 			_,outbound := {{ pkg "httpruntime" }}MarshalerForRequest(r)
+			m, ok := outbound.({{ pkg "httpruntime" }}.MarshalerPbJSON)
+			if ok {
+				m.Marshaler.EmitDefaults = true
+			}
 			w.Header().Set("Content-Type", outbound.ContentType())
 			{{ if $b | ResponseBody -}}
 			xrsp := rsp.(*{{$m.ResponseType.GoType $m.Service.File.GoPkg.Path | goTypeName }})
