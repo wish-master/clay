@@ -1,4 +1,4 @@
-module github.com/utrack/clay/v2
+module github.com/wish-master/clay/v2
 
 require (
 	github.com/go-chi/chi v3.3.4+incompatible
@@ -20,3 +20,5 @@ require (
 )
 
 go 1.13
+
+replace github.com/utrack/clay/v2 => github.com/wish-master/clay/v2 v2.4.4

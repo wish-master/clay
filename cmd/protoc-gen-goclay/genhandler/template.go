@@ -12,7 +12,7 @@ import (
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 	"github.com/grpc-ecosystem/grpc-gateway/utilities"
 	"github.com/pkg/errors"
-	"github.com/utrack/clay/v2/cmd/protoc-gen-goclay/internal"
+	"github.com/wish-master/clay/v2/cmd/protoc-gen-goclay/internal"
 )
 
 var (
